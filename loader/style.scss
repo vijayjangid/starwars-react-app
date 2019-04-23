@@ -1,0 +1,29 @@
+@import '../styles/variables.scss';
+
+.loader-mask {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0,0,0,0.7);
+  z-index: 9999;
+}
+.loader {
+  /*border: 16px solid #f3f3f3;
+  border-top: 16px solid $highlight-color;
+  border-radius: 50%;*/
+  border: none;
+  width: 120px;
+  height: 120px;
+  background-image: url('//image.flaticon.com/icons/svg/825/825086.svg');
+  animation: spin 2s linear infinite;
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}

@@ -1,0 +1,121 @@
+@import '../../styles/variables.scss';
+.results-item {
+  display: flex;
+  position: relative;
+  margin: 0 1% 15px;
+  box-shadow: 0 3px 20px rgba(0, 0, 0, .2);
+  background: rgba(74, 74, 0, .5);
+  padding: 15px 20px;
+  width: 100%;
+  overflow: hidden;
+  list-style: none;
+  flex-direction: column;
+  &:hover, &.expanded {
+    background: $highlight-color;
+    color: #454545;
+  }
+  &.expanded {
+    width: 100% !important;
+  }
+}
+
+@media screen and (min-width:769px) {
+  .results-item {
+    width: 48%
+  }
+}
+
+@media screen and (min-width:1920px) {
+  .results-item {
+    width: 31.3333%
+  }
+}
+
+.results-title {
+  display: inline-block;
+  margin: 0;
+  padding-bottom: 3px;
+  line-height: 2rem;
+  font-family: $title-font-family;
+}
+
+.results-title span {
+  font-size: 1rem
+}
+
+.results-info {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  line-height: 1.5rem;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  width: 100%;
+  li {
+    width: 33.3%;
+    display: flex;
+    margin: 10px 0;
+    .value {
+      margin: auto 10px;
+      font-size: 14px;
+    }
+    .icon {
+      background-size: contain;
+      background-repeat: no-repeat;
+      background-position: center;
+      min-height: 32px;
+      min-width: 32px;
+      max-height: 32px;
+      max-width: 32px;
+      margin: auto 0;
+      &.population {
+        background-image: url('//image.flaticon.com/icons/svg/649/649167.svg');
+      }
+      &.size {
+        background-image: url('//image.flaticon.com/icons/svg/791/791100.svg');
+      }
+      &.gravity {
+        background-image: url('//image.flaticon.com/icons/svg/308/308824.svg');
+      }
+      &.climate {
+        background-image: url('//image.flaticon.com/icons/svg/661/661286.svg');
+      }
+      &.surface-water {
+        background-image: url('//image.flaticon.com/icons/svg/869/869763.svg');
+      }
+      &.terrain {
+        background-image: url('//image.flaticon.com/icons/svg/921/921472.svg');
+      }
+      &.rotation-period {
+        background-image: url('//image.flaticon.com/icons/svg/911/911249.svg');
+      }
+      &.orbital-period {
+        background-image: url('//image.flaticon.com/icons/svg/885/885808.svg');
+      }
+    }
+  }
+}
+
+@media screen and (max-width:769px) {
+  .results-info {
+    li {
+      width: 50%;
+    }
+  }
+}
+
+.arrow {
+  width: 0;
+  height: 0;
+  border-left: 5px solid transparent;
+  border-right: 5px solid transparent;
+  border-top: 5px solid black;
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  &.expanded {
+    border-bottom: 5px solid black;
+    border-top: none;
+  }
+}
